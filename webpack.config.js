@@ -21,13 +21,27 @@ module.exports = {
         hot: true,
         contentBase: './'
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         loaders: [
             {
                 test: /\.jsx?$/,
                 include: path.join(__dirname, 'src'),
                 loaders: ["react-hot-loader", "babel-loader"]
+            },
+            {
+                test: /\.css$/,
+                include: path.join(__dirname, 'src'),
+                loader: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: ["babel-loader", "eslint-loader"]
             }
+
         ]
     }
 };
