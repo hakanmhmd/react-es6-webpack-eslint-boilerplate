@@ -5,6 +5,7 @@ module.exports = {
     devtool: 'eval-source-map',
     entry: {
         main: [
+            'eventsource-polyfill', //IE hot reloading
             'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
             './src/main.js'
@@ -20,7 +21,7 @@ module.exports = {
     ],
     devServer: {
         hot: true,
-        contentBase: './'
+        contentBase: './src'
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -28,8 +29,8 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
-                include: path.join(__dirname, 'src'),
+                test: /\.jsx?$/, 
+                exclude: /node_modules/,
                 loaders: ["react-hot-loader", "babel-loader"]
             },
             {
