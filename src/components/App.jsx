@@ -7,10 +7,9 @@ class App extends Component {
     return (
       <div>
         <h1> App </h1>
-        <div className='App'>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-
+        <div className="App">
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
         </div>
       </div>
     );
