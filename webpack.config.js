@@ -36,11 +36,7 @@ module.exports = {
                 include: path.join(__dirname, 'src'),
                 loader: ["style-loader", "css-loader"]
             },
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: ["babel-loader", "eslint-loader"]
-            }
+            
 
         ]
     }
