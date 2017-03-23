@@ -1,0 +1,27 @@
+{
+  "name": "react-es6-webpack-eslint-boilerplate",
+  "version": "1.0.0",
+  "description": "React boilerplate code to work with ES6, Webpack and ESLint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakanmhmd/react-es6-webpack-eslint-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "es6",
+    "babel",
+    "eslint",
+    "reactjs"
+  ],
+  "author": "Hakan Mehmed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hakanmhmd/react-es6-webpack-eslint-boilerplate/issues"
+  },
+  "homepage": "https://github.com/hakanmhmd/react-es6-webpack-eslint-boilerplate#readme"
+}
