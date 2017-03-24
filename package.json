@@ -7,7 +7,8 @@
     "start": "node server.js",
     "lint": "esw --color --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty . *.js",
     "lint:watch": "npm run lint -- --watch",
-    "clean": "rimraf ./dist && mkdir dist"
+    "clean": "rimraf ./dist && mkdir dist",
+    "build": "webpack --config webpack.config.production.js -w"
   },
   "repository": {
     "type": "git",
