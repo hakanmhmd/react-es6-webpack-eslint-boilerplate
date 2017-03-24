@@ -21,7 +21,7 @@ module.exports = {
     ],
     devServer: {
         hot: true,
-        contentBase: './src'
+        contentBase: './'
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -36,7 +36,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 include: path.join(__dirname, 'src'),
-                loader: ["style-loader", "css-loader"]
+                loader: ["style-loader", "css-loader", "autoprefixer-loader"]
             },
             {
                 test: /\.jsx?$/,
