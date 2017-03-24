@@ -4,7 +4,10 @@
   "description": "React boilerplate code to work with ES6, Webpack and ESLint",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "esw --color --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty . *.js",
+    "lint:watch": "npm run lint -- --watch",
+    "clean": "rimraf ./dist && mkdir dist"
   },
   "repository": {
     "type": "git",
@@ -34,15 +37,17 @@
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.27.3",
     "eslint": "^3.18.0",
-    "eslint-config-airbnb": "^14.1.0",
+    "eslint-formatter-pretty": "^1.1.0",
     "eslint-loader": "^1.7.0",
     "eslint-plugin-compat": "^1.0.2",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
+    "eslint-watch": "^3.0.1",
     "eventsource-polyfill": "^0.9.6",
     "file-loader": "^0.10.1",
+    "open-browser-webpack-plugin": "0.0.5",
     "react-hot-loader": "^1.3.1",
     "strip-loader": "^0.1.2",
     "style-loader": "^0.16.0",

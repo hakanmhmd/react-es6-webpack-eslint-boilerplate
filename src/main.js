@@ -1,10 +1,10 @@
 import 'babel-polyfill';
 import { render } from 'react-dom';
+import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
-import React from 'react';
 import './main.css';
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // The main component of the application
 render(

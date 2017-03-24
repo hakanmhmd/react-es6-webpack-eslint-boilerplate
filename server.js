@@ -1,9 +1,9 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var devConfig = require('./webpack.config');
-var prodConfig = require('./webpack-production.config');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const devConfig = require('./webpack.config');
+const prodConfig = require('./webpack.config.production');
 
-new WebpackDevServer(webpack(devConfig), {
+new WebpackDevServer(webpack(devConfig), { //change to prodConfig to run the production configuration instead
   publicPath: devConfig.output.publicPath,
   hot: true,
   historyApiFallback: true

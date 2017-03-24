@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -17,7 +18,8 @@ module.exports = {
         publicPath: '/dist'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
     ],
     devServer: {
         hot: true,
@@ -39,11 +41,10 @@ module.exports = {
                 loader: ["style-loader", "css-loader", "autoprefixer-loader"]
             },
             {
-                test: /\.jsx?$/,
+                test: /\.(png|jpg|ttf|eot)$/,
                 exclude: /node_modules/,
-                loader: ["babel-loader", "eslint-loader"]
+                loader: 'url-loader?limit=10000' //small images will get bundled in the js (base64 encoded)
             }
-
         ]
     }
 };
