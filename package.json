@@ -8,7 +8,8 @@
     "lint": "esw --color --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty . *.js",
     "lint:watch": "npm run lint -- --watch",
     "clean": "rimraf ./dist && mkdir dist",
-    "build": "webpack --config webpack.config.production.js -w"
+    "build": "webpack --config webpack.config.production.js",
+    "build: watch": "webpack --config webpack.config.production.js -w"
   },
   "repository": {
     "type": "git",
@@ -62,6 +63,7 @@
     "jquery": "^3.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-google-maps-loader": "^2.0.2",
     "react-router": "^2.4.0"
   }
 }
