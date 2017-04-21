@@ -63,7 +63,6 @@
     "jquery": "^3.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-google-maps-loader": "^2.0.2",
     "react-router": "^2.4.0"
   }
 }
